@@ -4,7 +4,7 @@
 
 [![Profile Views](https://komarev.com/ghpvc/?username=TrimikRajMaharjan&label=Profile+Views&color=0e8a16&style=flat-square)](https://github.com/TrimikRajMaharjan)
 [![GitHub Followers](https://img.shields.io/github/followers/TrimikRajMaharjan?label=Followers&style=flat-square&color=7b2ff7)](https://github.com/TrimikRajMaharjan?tab=followers)
-[![GitHub Stars](https://img.shields.io/github/stars/TrimikRajMaharjan?label=Stars&style=flat-square&color=00d4ff&labelColor=1a1040)](https://github.com/TrimikRajMaharjan?tab=stars)
+[![GitHub Stars](https://img.shields.io/badge/GitHub-121212?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TrimikRajMaharjan?tab=stars)
 
 </div>
 
@@ -36,10 +36,21 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 
 </div>
 
+### Laravel Packages
+<div align="center">
+
+![Laravel Nova](https://img.shields.io/badge/Laravel%20Nova-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Backpack for Laravel](https://img.shields.io/badge/Backpack%20for%20Laravel-C41230?style=for-the-badge&logo=laravel&logoColor=white)
+![Inertia.js](https://img.shields.io/badge/Inertia.js-6C63FF?style=for-the-badge&logo=laravel&logoColor=white)
+
+</div>
+
 ### Frontend
 <div align="center">
 
 ![Vue.js](https://img.shields.io/badge/Vue.js-42B883?style=for-the-badge&logo=vuedotjs&logoColor=white)
+![Inertia.js](https://img.shields.io/badge/Inertia.js-6C63FF?style=for-the-badge&logo=laravel&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B9?style=for-the-badge&logo=css3&logoColor=white)
@@ -51,6 +62,7 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 <div align="center">
 
 ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
@@ -95,27 +107,13 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![Trimik's GitHub Stats](https://github-readme-stats.vercel.app/api?username=TrimikRajMaharjan&show_icons=true&theme=github_dark&hide_border=true&bg_color=0a0e1a&text_color=ffffff&icon_color=00d4ff&title_color=7b2ff7&border_radius=10)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=TrimikRajMaharjan&layout=compact&theme=github_dark&hide_border=true&bg_color=0a0e1a&text_color=ffffff&title_color=7b2ff7&border_radius=10)
-
-![GitHub Streak](https://streak-stats.demolab.com/?user=TrimikRajMaharjan&theme=github-dark-nightowl&border_radius=10&hide_border=true&background=0a0e1a&currStreak=00d4ff&sideNums=ffffff&sideLabels=a0aec0&dates=a0aec0&title=7b2ff7)
-
-</div>
-
----
-
 ## 🤝 Connect With Me
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/trimikrajmaharjan)
-[![GitHub](https://img.shields.io/badge/GitHub-121212?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TrimikRajMaharjan)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:trimik@email.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/trimikraj)
+[![GitHub](https://img.shields.io/badge/GitHub-121212?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Trimikraj)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:trimikmaharjan@gmail.com)
 
 </div>
 
