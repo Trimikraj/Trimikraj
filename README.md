@@ -1,4 +1,4 @@
-![Trimik Raj Maharjan - GitHub Banner](https://raw.githubusercontent.com/TrimikRajMaharjan/TrimikRajMaharjan/main/banner.svg)
+![Trimik Raj Maharjan - GitHub Banner](https://raw.githubusercontent.com/TrimikRaj/TrimikRaj/main/banner.svg)
 
 <div align="center">
 
