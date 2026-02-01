@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0f1629"/>
+      <stop offset="100%" style="stop-color:#1a1040"/>
+    </linearGradient>
+
+    <!-- Accent gradient for lines -->
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#7b2ff7"/>
+      <stop offset="100%" style="stop-color:#ff6ac1;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <!-- Glow filter for accent elements -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for the name -->
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle noise/grain overlay -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feBlend in="SourceGraphic" mode="multiply" result="grain"/>
+    </filter>
+
+    <!-- Radial glow behind name -->
+    <radialGradient id="nameGlow" cx="42%" cy="50%" r="35%">
+      <stop offset="0%" style="stop-color:#7b2ff7;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0a0e1a;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Circle gradient for avatar placeholder -->
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff"/>
+      <stop offset="100%" style="stop-color:#7b2ff7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" fill="url(#bgGrad)"/>
+
+  <!-- Radial glow behind text area -->
+  <rect width="1200" height="340" fill="url(#nameGlow)"/>
+
+  <!-- Grid lines (subtle background texture) -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <!-- Vertical grid lines -->
+    <line x1="100" y1="0" x2="100" y2="340"/>
+    <line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="300" y1="0" x2="300" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="500" y1="0" x2="500" y2="340"/>
+    <line x1="600" y1="0" x2="600" y2="340"/>
+    <line x1="700" y1="0" x2="700" y2="340"/>
+    <line x1="800" y1="0" x2="800" y2="340"/>
+    <line x1="900" y1="0" x2="900" y2="340"/>
+    <line x1="1000" y1="0" x2="1000" y2="340"/>
+    <line x1="1100" y1="0" x2="1100" y2="340"/>
+    <!-- Horizontal grid lines -->
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="180" x2="1200" y2="180"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+  </g>
+
+  <!-- Geometric decorative shapes - top right -->
+  <g opacity="0.12">
+    <polygon points="950,20 1000,50 950,80 900,50" fill="none" stroke="#00d4ff" stroke-width="1"/>
+    <polygon points="980,10 1040,45 980,80 920,45" fill="none" stroke="#7b2ff7" stroke-width="0.5"/>
+    <circle cx="1050" cy="55" r="25" fill="none" stroke="#ff6ac1" stroke-width="0.7" opacity="0.5"/>
+  </g>
+
+  <!-- Geometric decorative shapes - bottom left -->
+  <g opacity="0.1">
+    <rect x="30" y="260" width="40" height="40" rx="4" fill="none" stroke="#00d4ff" stroke-width="0.8" transform="rotate(15 50 280)"/>
+    <rect x="55" y="275" width="30" height="30" rx="3" fill="none" stroke="#7b2ff7" stroke-width="0.5" transform="rotate(-10 70 290)"/>
+  </g>
+
+  <!-- Floating dots (decorative) -->
+  <g filter="url(#glow)">
+    <circle cx="80" cy="60" r="2" fill="#00d4ff" opacity="0.6"/>
+    <circle cx="150" cy="40" r="1.5" fill="#7b2ff7" opacity="0.5"/>
+    <circle cx="1080" cy="280" r="2" fill="#ff6ac1" opacity="0.4"/>
+    <circle cx="1120" cy="120" r="1.5" fill="#00d4ff" opacity="0.3"/>
+    <circle cx="60" cy="180" r="1" fill="#7b2ff7" opacity="0.5"/>
+    <circle cx="1150" cy="200" r="1.8" fill="#00d4ff" opacity="0.4"/>
+    <circle cx="200" cy="290" r="1.2" fill="#ff6ac1" opacity="0.35"/>
+    <circle cx="1000" cy="30" r="1" fill="#ff6ac1" opacity="0.3"/>
+  </g>
+
+  <!-- Diagonal accent line - top -->
+  <line x1="0" y1="12" x2="1200" y2="12" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Diagonal accent line - bottom -->
+  <line x1="0" y1="328" x2="1200" y2="328" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- Avatar circle (right side) -->
+  <g>
+    <circle cx="950" cy="170" r="88" fill="#111827" stroke="url(#avatarGrad)" stroke-width="2.5" opacity="0.9"/>
+    <circle cx="950" cy="170" r="82" fill="none" stroke="url(#accentLine)" stroke-width="0.5" opacity="0.4" stroke-dasharray="8 4"/>
+    <!-- Person icon inside -->
+    <circle cx="950" cy="148" r="22" fill="#1e293b" stroke="url(#avatarGrad)" stroke-width="1.5"/>
+    <path d="M920 215 Q920 190 950 190 Q980 190 980 215" fill="#1e293b" stroke="url(#avatarGrad)" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- T letter overlay -->
+    <text x="950" y="158" text-anchor="middle" font-family="'Georgia', serif" font-size="28" font-weight="bold" fill="url(#avatarGrad)">T</text>
+  </g>
+
+  <!-- Main Name -->
+  <text x="440" y="148" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" fill="#ffffff" filter="url(#textGlow)" letter-spacing="1">Trimik Raj Maharjan</text>
+
+  <!-- Accent line under name -->
+  <rect x="220" y="168" width="440" height="2.5" rx="1.25" fill="url(#accentLine)" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Title / Role -->
+  <text x="440" y="210" text-anchor="middle" font-family="'Courier New', monospace" font-size="20" fill="#00d4ff" opacity="0.9" letter-spacing="3">&lt; Software Developer /&gt;</text>
+
+  <!-- Tagline -->
+  <text x="440" y="252" text-anchor="middle" font-family="'Georgia', serif" font-size="14" fill="#a0aec0" letter-spacing="0.5">Building scalable web applications | Java · Laravel · Cloud</text>
+
+  <!-- Small corner brackets for style -->
+  <g fill="none" stroke="#7b2ff7" stroke-width="1.2" opacity="0.5">
+    <!-- Top-left bracket -->
+    <path d="M18 30 L18 18 L30 18"/>
+    <!-- Top-right bracket -->
+    <path d="M1170 18 L1182 18 L1182 30"/>
+    <!-- Bottom-left bracket -->
+    <path d="M18 310 L18 322 L30 322"/>
+    <!-- Bottom-right bracket -->
+    <path d="M1170 322 L1182 322 L1182 310"/>
+  </g>
+
+  <!-- Small version label bottom-right -->
+  <text x="1160" y="315" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#4a5568" letter-spacing="1">v2.0 // 2025</text>
+</svg>
