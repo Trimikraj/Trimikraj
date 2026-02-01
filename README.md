@@ -1,13 +1,5 @@
 ![Trimik Raj Maharjan - GitHub Banner](https://raw.githubusercontent.com/TrimikRaj/TrimikRaj/main/banner.svg)
 
-<div align="center">
-
-[![Profile Views](https://komarev.com/ghpvc/?username=TrimikRajMaharjan&label=Profile+Views&color=0e8a16&style=flat-square)](https://github.com/TrimikRajMaharjan)
-[![GitHub Followers](https://img.shields.io/github/followers/TrimikRajMaharjan?label=Followers&style=flat-square&color=7b2ff7)](https://github.com/TrimikRajMaharjan?tab=followers)
-[![GitHub Stars](https://img.shields.io/badge/GitHub-121212?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TrimikRajMaharjan?tab=stars)
-
-</div>
-
 ---
 
 ## 👋 About Me
