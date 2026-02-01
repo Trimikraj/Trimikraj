@@ -82,6 +82,16 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 
 </div>
 
+### Architecture & Infrastructure
+<div align="center">
+
+![Microservices](https://img.shields.io/badge/Microservices-FF6384?style=for-the-badge&logoColor=white)
+![LavinMQ](https://img.shields.io/badge/LavinMQ-F39C12?style=for-the-badge&logoColor=white)
+![Message Queues](https://img.shields.io/badge/Message%20Queues-8E44AD?style=for-the-badge&logoColor=white)
+![Multi-DB Sync](https://img.shields.io/badge/Multi--DB%20Sync-2ECC71?style=for-the-badge&logoColor=white)
+
+</div>
+
 ---
 
 ## 💼 Experience
