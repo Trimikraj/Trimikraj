@@ -7,7 +7,7 @@
 I'm a **self-motivated, passionate, and creative software engineer** focused on building scalable web applications and robust REST APIs. With hands-on experience across full-stack development, cloud platforms, and messaging integrations, I bring strong problem-solving skills and clean code practices to every project.
 
 - 🚀 **Currently** — Contractor / Freelancer (Full-time Software Engineer)
-- 💼 **Experience** — 7+ years across Nepal, UK, and remote roles
+- 💼 **Experience** — 8+ years across Nepal, UK, and remote roles
 - ☁️ **Cloud** — Google Cloud Platform (IoT Core, platform.sh)
 - 📱 **Messaging APIs** — Firebase Cloud Messaging (FCM), Facebook Messenger Send API
 - 🌍 **Based in** — Nepal
