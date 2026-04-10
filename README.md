@@ -165,5 +165,5 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 ---
 
 <div align="center">
-<sub>✨ Engineered with precision. Deployed with purpose.</sub>
+<sub>Engineered with precision. Deployed with purpose.</sub>
 </div>
