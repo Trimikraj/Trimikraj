@@ -1,151 +1,185 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640">
   <defs>
-    <!-- Main background gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0e1a"/>
-      <stop offset="50%" style="stop-color:#0f1629"/>
-      <stop offset="100%" style="stop-color:#1a1040"/>
-    </linearGradient>
-
-    <!-- Accent gradient for lines -->
-    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
-      <stop offset="50%" style="stop-color:#7b2ff7"/>
-      <stop offset="100%" style="stop-color:#ff6ac1;stop-opacity:0.6"/>
-    </linearGradient>
-
-    <!-- Glow filter for accent elements -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <pattern id="pcb-dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r=".6" fill="#3a3c45" opacity=".5"/>
+    </pattern>
+    <filter id="led-glow">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- Soft glow for the name -->
-    <filter id="textGlow">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="20"/>
     </filter>
-
-    <!-- Subtle noise/grain overlay -->
-    <filter id="grain">
-      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feBlend in="SourceGraphic" mode="multiply" result="grain"/>
-    </filter>
-
-    <!-- Radial glow behind name -->
-    <radialGradient id="nameGlow" cx="42%" cy="50%" r="35%">
-      <stop offset="0%" style="stop-color:#7b2ff7;stop-opacity:0.15"/>
-      <stop offset="100%" style="stop-color:#0a0e1a;stop-opacity:0"/>
-    </radialGradient>
-
-    <!-- Circle gradient for avatar placeholder -->
-    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00d4ff"/>
-      <stop offset="100%" style="stop-color:#7b2ff7"/>
-    </linearGradient>
+    <clipPath id="chip-clip"><rect x="388" y="165" width="504" height="310" rx="3"/></clipPath>
   </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="340" fill="url(#bgGrad)"/>
+  <!-- BG -->
+  <rect width="1280" height="640" fill="#25272e"/>
+  <rect width="1280" height="640" fill="url(#pcb-dots)"/>
 
-  <!-- Radial glow behind text area -->
-  <rect width="1200" height="340" fill="url(#nameGlow)"/>
+  <!-- Ambient glow behind chip -->
+  <ellipse cx="640" cy="320" rx="320" ry="200" fill="#00ff88" opacity=".018" filter="url(#soft-glow)"/>
 
-  <!-- Grid lines (subtle background texture) -->
-  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
-    <!-- Vertical grid lines -->
-    <line x1="100" y1="0" x2="100" y2="340"/>
-    <line x1="200" y1="0" x2="200" y2="340"/>
-    <line x1="300" y1="0" x2="300" y2="340"/>
-    <line x1="400" y1="0" x2="400" y2="340"/>
-    <line x1="500" y1="0" x2="500" y2="340"/>
-    <line x1="600" y1="0" x2="600" y2="340"/>
-    <line x1="700" y1="0" x2="700" y2="340"/>
-    <line x1="800" y1="0" x2="800" y2="340"/>
-    <line x1="900" y1="0" x2="900" y2="340"/>
-    <line x1="1000" y1="0" x2="1000" y2="340"/>
-    <line x1="1100" y1="0" x2="1100" y2="340"/>
-    <!-- Horizontal grid lines -->
-    <line x1="0" y1="60" x2="1200" y2="60"/>
-    <line x1="0" y1="120" x2="1200" y2="120"/>
-    <line x1="0" y1="180" x2="1200" y2="180"/>
-    <line x1="0" y1="240" x2="1200" y2="240"/>
-    <line x1="0" y1="300" x2="1200" y2="300"/>
+  <!-- CIRCUIT TRACES - LEFT NETWORK -->
+  <g stroke="#0a5c35" fill="none" opacity=".45">
+    <!-- Left horizontal runs -->
+    <path d="M0,110 H160 L175,125 H310" stroke-width="1.2"/>
+    <path d="M0,200 H90 V240 H200 L215,225 H310" stroke-width="1"/>
+    <path d="M0,340 H120 L135,355 H260 V400 H310" stroke-width="1"/>
+    <path d="M0,470 H80 V430 H180 L195,445 H310" stroke-width="1.2"/>
+    <path d="M0,550 H140 V520 H220" stroke-width=".8"/>
+    <!-- Left vertical feeders -->
+    <path d="M160,0 V110" stroke-width=".8"/>
+    <path d="M310,125 V165" stroke-width="1" stroke="#8b5e3c" opacity=".4"/>
+    <path d="M260,400 V640" stroke-width=".8"/>
+
+    <!-- Right horizontal runs -->
+    <path d="M1280,130 H1120 L1105,145 H970" stroke-width="1.2"/>
+    <path d="M1280,240 H1160 V270 H1060 L1045,255 H970" stroke-width="1"/>
+    <path d="M1280,380 H1140 L1125,365 H1020 V320 H970" stroke-width="1"/>
+    <path d="M1280,490 H1180 V460 H1080 L1065,475 H970" stroke-width="1.2"/>
+    <path d="M1280,560 H1120 V540 H1040" stroke-width=".8"/>
+    <!-- Right vertical feeders -->
+    <path d="M1120,0 V130" stroke-width=".8"/>
+    <path d="M970,145 V165" stroke-width="1" stroke="#8b5e3c" opacity=".4"/>
+    <path d="M1020,320 V0" stroke-width=".8" opacity=".3"/>
+    <path d="M1080,460 V640" stroke-width=".8"/>
+
+    <!-- Top/bottom runs to chip -->
+    <path d="M440,0 V100 L455,115 V165" stroke-width=".8"/>
+    <path d="M560,0 V80 H580 V165" stroke-width=".8" opacity=".35"/>
+    <path d="M760,0 V60 L745,75 V165" stroke-width=".8" opacity=".35"/>
+    <path d="M840,0 V100 L825,115 V165" stroke-width=".8"/>
+    <path d="M440,640 V540 L455,525 V475" stroke-width=".8"/>
+    <path d="M640,640 V560 V475" stroke-width=".8" opacity=".35"/>
+    <path d="M840,640 V540 L825,525 V475" stroke-width=".8"/>
   </g>
 
-  <!-- Geometric decorative shapes - top right -->
-  <g opacity="0.12">
-    <polygon points="950,20 1000,50 950,80 900,50" fill="none" stroke="#00d4ff" stroke-width="1"/>
-    <polygon points="980,10 1040,45 980,80 920,45" fill="none" stroke="#7b2ff7" stroke-width="0.5"/>
-    <circle cx="1050" cy="55" r="25" fill="none" stroke="#ff6ac1" stroke-width="0.7" opacity="0.5"/>
+  <!-- Solder joints at intersections -->
+  <g fill="#8a8d98" opacity=".3">
+    <circle cx="160" cy="110" r="3"/><circle cx="310" cy="125" r="3.5"/>
+    <circle cx="200" cy="225" r="2.5"/><circle cx="260" cy="400" r="3"/>
+    <circle cx="180" cy="445" r="3"/><circle cx="1120" cy="130" r="3"/>
+    <circle cx="970" cy="145" r="3.5"/><circle cx="1060" cy="255" r="2.5"/>
+    <circle cx="1020" cy="320" r="3"/><circle cx="1080" cy="460" r="3"/>
+    <circle cx="440" cy="100" r="2.5"/><circle cx="840" cy="100" r="2.5"/>
+    <circle cx="440" cy="540" r="2.5"/><circle cx="840" cy="540" r="2.5"/>
   </g>
 
-  <!-- Geometric decorative shapes - bottom left -->
-  <g opacity="0.1">
-    <rect x="30" y="260" width="40" height="40" rx="4" fill="none" stroke="#00d4ff" stroke-width="0.8" transform="rotate(15 50 280)"/>
-    <rect x="55" y="275" width="30" height="30" rx="3" fill="none" stroke="#7b2ff7" stroke-width="0.5" transform="rotate(-10 70 290)"/>
+  <!-- SMD components scattered -->
+  <g fill="none" stroke="#4a4c55" stroke-width=".8" opacity=".45">
+    <rect x="100" y="150" width="18" height="7" rx="1"/><rect x="50" y="490" width="18" height="7" rx="1"/>
+    <rect x="200" y="560" width="18" height="7" rx="1"/><rect x="1140" y="170" width="18" height="7" rx="1"/>
+    <rect x="1190" y="430" width="18" height="7" rx="1"/><rect x="1060" y="560" width="18" height="7" rx="1"/>
+  </g>
+  <!-- Capacitor symbols -->
+  <g stroke="#4a4c55" stroke-width=".7" opacity=".35">
+    <line x1="280" y1="510" x2="280" y2="518"/><line x1="276" y1="518" x2="284" y2="518"/>
+    <line x1="276" y1="521" x2="284" y2="521"/><line x1="280" y1="521" x2="280" y2="529"/>
+    <line x1="1000" y1="180" x2="1000" y2="188"/><line x1="996" y1="188" x2="1004" y2="188"/>
+    <line x1="996" y1="191" x2="1004" y2="191"/><line x1="1000" y1="191" x2="1000" y2="199"/>
   </g>
 
-  <!-- Floating dots (decorative) -->
-  <g filter="url(#glow)">
-    <circle cx="80" cy="60" r="2" fill="#00d4ff" opacity="0.6"/>
-    <circle cx="150" cy="40" r="1.5" fill="#7b2ff7" opacity="0.5"/>
-    <circle cx="1080" cy="280" r="2" fill="#ff6ac1" opacity="0.4"/>
-    <circle cx="1120" cy="120" r="1.5" fill="#00d4ff" opacity="0.3"/>
-    <circle cx="60" cy="180" r="1" fill="#7b2ff7" opacity="0.5"/>
-    <circle cx="1150" cy="200" r="1.8" fill="#00d4ff" opacity="0.4"/>
-    <circle cx="200" cy="290" r="1.2" fill="#ff6ac1" opacity="0.35"/>
-    <circle cx="1000" cy="30" r="1" fill="#ff6ac1" opacity="0.3"/>
+  <!-- === MAIN IC CHIP === -->
+  <!-- Outer package -->
+  <rect x="380" y="155" width="520" height="330" rx="4" fill="none" stroke="#3a3c45" stroke-width="1.5"/>
+  <!-- Inner die -->
+  <rect x="395" y="170" width="490" height="300" rx="2" fill="#2a2c34" stroke="#33353d" stroke-width="1"/>
+
+  <!-- CHIP PINS - 7 per side -->
+  <g stroke="#8b5e3c" stroke-width="2.5" stroke-linecap="round">
+    <!-- Left pins -->
+    <line x1="360" y1="205" x2="395" y2="205"/><line x1="360" y1="240" x2="395" y2="240"/>
+    <line x1="360" y1="275" x2="395" y2="275"/><line x1="360" y1="310" x2="395" y2="310"/>
+    <line x1="360" y1="345" x2="395" y2="345"/><line x1="360" y1="380" x2="395" y2="380"/>
+    <line x1="360" y1="415" x2="395" y2="415"/>
+    <!-- Right pins -->
+    <line x1="885" y1="205" x2="920" y2="205"/><line x1="885" y1="240" x2="920" y2="240"/>
+    <line x1="885" y1="275" x2="920" y2="275"/><line x1="885" y1="310" x2="920" y2="310"/>
+    <line x1="885" y1="345" x2="920" y2="345"/><line x1="885" y1="380" x2="920" y2="380"/>
+    <line x1="885" y1="415" x2="920" y2="415"/>
+    <!-- Top pins -->
+    <line x1="440" y1="135" x2="440" y2="170"/><line x1="500" y1="135" x2="500" y2="170"/>
+    <line x1="560" y1="135" x2="560" y2="170"/><line x1="640" y1="135" x2="640" y2="170"/>
+    <line x1="720" y1="135" x2="720" y2="170"/><line x1="780" y1="135" x2="780" y2="170"/>
+    <line x1="840" y1="135" x2="840" y2="170"/>
+    <!-- Bottom pins -->
+    <line x1="440" y1="470" x2="440" y2="505"/><line x1="500" y1="470" x2="500" y2="505"/>
+    <line x1="560" y1="470" x2="560" y2="505"/><line x1="640" y1="470" x2="640" y2="505"/>
+    <line x1="720" y1="470" x2="720" y2="505"/><line x1="780" y1="470" x2="780" y2="505"/>
+    <line x1="840" y1="470" x2="840" y2="505"/>
   </g>
 
-  <!-- Diagonal accent line - top -->
-  <line x1="0" y1="12" x2="1200" y2="12" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
-
-  <!-- Diagonal accent line - bottom -->
-  <line x1="0" y1="328" x2="1200" y2="328" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.7" filter="url(#glow)"/>
-
-  <!-- Avatar circle (right side) -->
-  <g>
-    <circle cx="950" cy="170" r="88" fill="#111827" stroke="url(#avatarGrad)" stroke-width="2.5" opacity="0.9"/>
-    <circle cx="950" cy="170" r="82" fill="none" stroke="url(#accentLine)" stroke-width="0.5" opacity="0.4" stroke-dasharray="8 4"/>
-    <!-- Person icon inside -->
-    <circle cx="950" cy="148" r="22" fill="#1e293b" stroke="url(#avatarGrad)" stroke-width="1.5"/>
-    <path d="M920 215 Q920 190 950 190 Q980 190 980 215" fill="#1e293b" stroke="url(#avatarGrad)" stroke-width="1.5" stroke-linejoin="round"/>
-    <!-- T letter overlay -->
-    <text x="950" y="158" text-anchor="middle" font-family="'Georgia', serif" font-size="28" font-weight="bold" fill="url(#avatarGrad)">T</text>
+  <!-- Pin pads -->
+  <g fill="#2e3038" stroke="#8b5e3c" stroke-width=".7">
+    <rect x="352" y="200" width="8" height="10" rx="1"/><rect x="352" y="235" width="8" height="10" rx="1"/>
+    <rect x="352" y="270" width="8" height="10" rx="1"/><rect x="352" y="305" width="8" height="10" rx="1"/>
+    <rect x="352" y="340" width="8" height="10" rx="1"/><rect x="352" y="375" width="8" height="10" rx="1"/>
+    <rect x="352" y="410" width="8" height="10" rx="1"/>
+    <rect x="920" y="200" width="8" height="10" rx="1"/><rect x="920" y="235" width="8" height="10" rx="1"/>
+    <rect x="920" y="270" width="8" height="10" rx="1"/><rect x="920" y="305" width="8" height="10" rx="1"/>
+    <rect x="920" y="340" width="8" height="10" rx="1"/><rect x="920" y="375" width="8" height="10" rx="1"/>
+    <rect x="920" y="410" width="8" height="10" rx="1"/>
   </g>
 
-  <!-- Main Name -->
-  <text x="440" y="148" text-anchor="middle" font-family="'Georgia', 'Times New Roman', serif" font-size="52" font-weight="bold" fill="#ffffff" filter="url(#textGlow)" letter-spacing="1">Trimik Raj Maharjan</text>
+  <!-- Pin-1 notch -->
+  <path d="M395,182 A6,6 0 0,1 395,194" fill="none" stroke="#4a4c55" stroke-width="1"/>
 
-  <!-- Accent line under name -->
-  <rect x="220" y="168" width="440" height="2.5" rx="1.25" fill="url(#accentLine)" opacity="0.8" filter="url(#glow)"/>
-
-  <!-- Title / Role -->
-  <text x="440" y="210" text-anchor="middle" font-family="'Courier New', monospace" font-size="20" fill="#00d4ff" opacity="0.9" letter-spacing="3">&lt; Software Developer /&gt;</text>
-
-  <!-- Tagline -->
-  <text x="440" y="252" text-anchor="middle" font-family="'Georgia', serif" font-size="14" fill="#a0aec0" letter-spacing="0.5">Building scalable web applications | Java · Laravel · Cloud</text>
-
-  <!-- Small corner brackets for style -->
-  <g fill="none" stroke="#7b2ff7" stroke-width="1.2" opacity="0.5">
-    <!-- Top-left bracket -->
-    <path d="M18 30 L18 18 L30 18"/>
-    <!-- Top-right bracket -->
-    <path d="M1170 18 L1182 18 L1182 30"/>
-    <!-- Bottom-left bracket -->
-    <path d="M18 310 L18 322 L30 322"/>
-    <!-- Bottom-right bracket -->
-    <path d="M1170 322 L1182 322 L1182 310"/>
+  <!-- Internal die traces (decorative) -->
+  <g stroke="#3a3c45" stroke-width=".5" fill="none" opacity=".45" clip-path="url(#chip-clip)">
+    <path d="M415,205 H455 V230 H480"/>
+    <path d="M415,275 H440 V300 H465"/>
+    <path d="M415,380 H450 V355"/>
+    <path d="M415,415 H435 V440"/>
+    <path d="M865,205 H840 V230"/>
+    <path d="M865,310 H835 V340 H810"/>
+    <path d="M865,380 H845 V360"/>
+    <path d="M865,415 H850 V440"/>
+    <!-- Cross traces -->
+    <path d="M480,190 V210 H520 V190" opacity=".3"/>
+    <path d="M780,440 V420 H750 V440" opacity=".3"/>
   </g>
 
-  <!-- Small version label bottom-right -->
-  <text x="1160" y="315" text-anchor="end" font-family="'Courier New', monospace" font-size="9" fill="#4a5568" letter-spacing="1">v2.0 // 2025</text>
+  <!-- === TEXT CONTENT === -->
+  <!-- Terminal prompt -->
+  <text x="640" y="228" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#8a8d98" letter-spacing="2"><tspan fill="#2d8659">~/trimikraj</tspan> $ cat profile.sys<tspan fill="#00ff88">_</tspan></text>
+
+  <!-- Name -->
+  <text x="640" y="285" text-anchor="middle" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="48" font-weight="800" fill="#ffffff" letter-spacing="1">Trimik Raj Maharjan</text>
+
+  <!-- Copper divider -->
+  <line x1="500" y1="302" x2="780" y2="302" stroke="#c87941" stroke-width="1.5" opacity=".5"/>
+
+  <!-- Role with typing cursor -->
+  <text x="640" y="336" text-anchor="middle" font-family="'Courier New',monospace" font-size="15" fill="#c87941" letter-spacing="5">SOFTWARE DEVELOPER<tspan fill="#c87941" opacity=".7">|</tspan></text>
+
+  <!-- Tech stack -->
+  <text x="640" y="375" text-anchor="middle" font-family="'Courier New',monospace" font-size="10.5" fill="#8a8d98" letter-spacing="2.5">Java  ·  Spring Boot  ·  Laravel  ·  Vue.js  ·  Cloud</text>
+
+  <!-- Location with LED -->
+  <g transform="translate(640,405)">
+    <circle cx="-90" cy="-4" r="3" fill="#00ff88" filter="url(#led-glow)" opacity=".8"/>
+    <circle cx="-90" cy="-4" r="1.5" fill="#fff" opacity=".5"/>
+    <text x="0" text-anchor="middle" font-family="'Courier New',monospace" font-size="9.5" fill="#2d8659" letter-spacing="3">KATHMANDU, NEPAL</text>
+  </g>
+
+  <!-- IC label -->
+  <text x="640" y="446" text-anchor="middle" font-family="'Courier New',monospace" font-size="7.5" fill="#4a4c55" letter-spacing="3">IC-TRM-2025 · REV.4 · 8+ YRS · 15+ PROJECTS</text>
+
+  <!-- Status LED top-right of chip -->
+  <circle cx="870" cy="185" r="3.5" fill="#00ff88" filter="url(#led-glow)" opacity=".85"/>
+  <circle cx="870" cy="185" r="1.5" fill="#fff" opacity=".5"/>
+
+  <!-- Binary decorations -->
+  <g font-family="'Courier New',monospace" font-size="7.5" fill="#0a5c35" letter-spacing="2">
+    <text x="50" y="65" opacity=".3">01001000 01100101 01101100 01101100</text>
+    <text x="50" y="80" opacity=".2">01101111 00100000 01010111 01101111</text>
+    <text x="50" y="610" opacity=".25">10110100 01011001 10001101 01110011</text>
+    <text x="990" y="65" opacity=".3">11010010 10110100 01011001</text>
+    <text x="990" y="80" opacity=".2">01110011 11001010 01010011</text>
+    <text x="970" y="610" opacity=".25">00110011 10101010 01010101 11001100</text>
+  </g>
+
+  <!-- URL footer -->
+  <text x="640" y="618" text-anchor="middle" font-family="'Courier New',monospace" font-size="8.5" fill="#4a4c55" letter-spacing="4">trimikraj.com.np</text>
 </svg>
