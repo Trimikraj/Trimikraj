@@ -10,7 +10,8 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 - 💼 **Experience** — 8+ years across Nepal, UK, and remote roles
 - ☁️ **Cloud** — Google Cloud Platform (IoT Core, platform.sh)
 - 📱 **Messaging APIs** — Firebase Cloud Messaging (FCM), Facebook Messenger Send API
-- 🌍 **Based in** — Nepal
+- 🌍 **Based in** — Kathmandu, Nepal
+- 🌐 **Portfolio** — [trimikraj.com.np](https://trimikraj.com.np)
 
 ---
 
@@ -86,6 +87,36 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 
 ---
 
+## 🔧 Services
+
+| Service | Description |
+|---------|-------------|
+| **Backend Development** | Scalable server-side applications and REST APIs using Java Spring Boot, Hibernate, and Laravel |
+| **Frontend Engineering** | Responsive web interfaces with Vue.js, Tailwind CSS, and modern JavaScript |
+| **Microservices Architecture** | Distributed systems with LavinMQ, multi-database sync, and event-driven communication |
+| **Cloud & DevOps** | GCP deployment, Docker containerization, CI/CD pipelines, Linux server management |
+| **Database Design** | Schema architecture and query optimization across MySQL, PostgreSQL, and MongoDB |
+| **API & Integrations** | FCM, Facebook Messenger Send API, payment gateways, and IoT platform integrations |
+
+---
+
+## 📂 Project Highlights
+
+> Due to contractual obligations, project names and client details are not disclosed.
+
+| # | Project | Description |
+|---|---------|-------------|
+| 01 | **Cloud IoT Energy Management** | Device state and telemetry system using Google Cloud IoT Core with automated power controls and emissions tracking |
+| 02 | **Restaurant POS & Inventory** | Real-time WebSocket (STOMP) order management with role-based access. Spring Boot, RabbitMQ, PostgreSQL |
+| 03 | **Rewards & Micro-Task Platform** | MLM platform with virtual currency, offer-walls, FCM/Messenger notifications, and publisher analytics |
+| 04 | **Healthcare Appointment System** | Hospital coordination platform with Khalti/PayPal payments and Viber chatbot with OTP validation |
+| 05 | **Booking & Delivery Management** | Suite of hostel, venue, and delivery systems with role-based permissions and dashboards |
+| 06 | **Government Document Digitization** | Secure file sharing between government branches with granular permissions. Backpack for Laravel |
+| 07 | **Emergency Disaster Notification** | Natural disaster alert system with safety instructions. Laravel web app + Ionic hybrid mobile app |
+| 08 | **Talent Matching Platforms** | Java-based matchmaking apps for intern and mentor discovery with portfolio management and interview scheduling |
+
+---
+
 ## 💼 Experience
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -111,10 +142,20 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 
 ---
 
+## 🎓 Education
+
+| Degree | Institution |
+|--------|-------------|
+| **Bachelor's in Information Technology** | Lovely Professional University, India |
+| **Mathematics & Computer Science** | National Institute of Science and Technology (NIST), Lalitpur |
+
+---
+
 ## 🤝 Connect With Me
 
 <div align="center">
 
+[![Portfolio](https://img.shields.io/badge/Portfolio-25272e?style=for-the-badge&logo=googlechrome&logoColor=00ff88)](https://trimikraj.com.np)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/trimikraj)
 [![GitHub](https://img.shields.io/badge/GitHub-121212?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Trimikraj)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:trimikmaharjan@gmail.com)
@@ -124,5 +165,5 @@ I'm a **self-motivated, passionate, and creative software engineer** focused on 
 ---
 
 <div align="center">
-<sub>✨ Built with precision. Deployed with purpose.</sub>
+<sub>✨ Engineered with precision. Deployed with purpose.</sub>
 </div>
